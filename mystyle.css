@@ -459,7 +459,6 @@ img {
 }
 
 /* Right Column */
-
 .rightcolumn {
     flex: 1;
     flex-basis: 250px; 
@@ -477,6 +476,7 @@ img {
     border-radius: 0; 
     margin-bottom: 10px;
 }
+
 .card.friend-request img {
     border-radius: 0px !important; 
     width: 80px !important;  
@@ -578,7 +578,6 @@ img {
 }
 
 /* Footer */
-
 .footer {
     position: fixed;
     bottom: 0;
