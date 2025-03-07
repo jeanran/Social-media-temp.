@@ -10,7 +10,15 @@ function toggleAccordion(id) {
 
     content.style.display = (content.style.display === "block") ? "none" : "block";
 }
+document.addEventListener("DOMContentLoaded", function () {
+    const closeBtn = document.getElementById("closeNotif");
+    const notifBox = document.getElementById("notifBox");
 
-document.querySelector(".close-btn").addEventListener("click", function () {
-    document.querySelector(".notification-box").style.display = "none"; 
+    if (closeBtn && notifBox) {
+        closeBtn.addEventListener("click", function () {
+            notifBox.classList.add("hidden"); 
+        });
+    }
 });
+
+

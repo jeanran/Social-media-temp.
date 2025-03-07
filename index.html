@@ -10,29 +10,35 @@
     <title>SOCIAL MEDIA TEMPLATE</title>
 </head>
 <body>
-
-<div class="navbar">
-    <a href="#home"><i class="fa fa-fw fa-home"></i> Logo</a>
-    <a href="#news"><i class="fa fa-fw fa-globe"></i></a>
-    <a href="#accountsettings"><i class="fa fa-fw fa-user"></i></a>
-    <a href="#messages"><i class="fa fa-fw fa-envelope"></i></a>
-
-    <div class="dropdown">
-        <a href="#"><i class="fa fa-fw fa-bell"></i></a>
-        <span class="badge">3</span>
-        <div class="dropdown-notif">
-            <a href="#">One new friend request</a>
-            <a href="#">John Doe posted on your wall</a>
-            <a href="#">Jane liked your post</a>
+    <div class="navbar">
+        <a href="#home"><i class="fa fa-fw fa-home"></i> Logo</a>
+        <a href="#news"><i class="fa fa-fw fa-globe"></i></a>
+        <a href="#accountsettings"><i class="fa fa-fw fa-user"></i></a>
+        <a href="#messages"><i class="fa fa-fw fa-envelope"></i></a>
+    
+        <div class="dropdown">
+            <div class="dropbtn">
+                <i class="fa fa-fw fa-bell"></i>
+                <span class="badge">3</span>
+            </div>
+            <div class="dropdown-content">
+                <a href="#">One new friend request</a>
+                <a href="#">John Doe posted on your wall</a>
+                <a href="#">Jane likes your post</a>
+            </div>
+        </div>
+        <div class="rightnav-icon">
+            <a href="#myaccount">
+                <img src="jhon.png" alt="Profile" class="rightprofile-img">
+            </a>
         </div>
     </div>
+    
+    
+        
 
-    <div class="right-icon">
-        <a href="#MyAccount"><i class="fa fa-fw fa-user-circle"></i></a>
-    </div>
-</div>
-<div class="container">
-    <!-- Left Column -->
+    <div class="container">
+    <!-- Left side -->
     <div class="leftcolumn">
         <div class="card">
             <h4 class="profile-title">My Profile</h4>
@@ -55,7 +61,7 @@
         </div>
 
         
-        <div class="card">
+        <div class="second_card">
             <button class="accordion-btn" onclick="toggleAccordion('groupContent')">
                 <i class="fa fa-users"></i> My Groups
             </button>
@@ -71,22 +77,22 @@
             </div>
 
             <button class="accordion-btn" onclick="toggleAccordion('photosContent')">
-                <i class="fa fa-camera"></i> My Photos
+                <i class="fa fa-users"></i> My Photos
             </button>
             <div id="photosContent" class="accordion-content">
                 <div class="photo-grid">
                     <img src="first.png" alt="Photo">
-                    <img src="first.png" alt="Photo">
-                    <img src="first.png" alt="Photo">
-                    <img src="first.png" alt="Photo">
-                    <img src="first.png" alt="Photo">
-                    <img src="first.png" alt="Photo">
+                    <img src="nature.png" alt="Photo">
+                    <img src="mountain.jpg" alt="Photo">
+                    <img src="snow.jpg" alt="Photo">
+                    <img src="img_forest.jpg" alt="Photo">
+                    <img src="snow.jpg" alt="Photo">
                 </div>
             </div>
         </div>
 
         <!-- Interests & Notification Box -->
-        <div class="card">
+        <div class="third_card">
             <h4>Interests</h4>
             <div class="tags">
                 <span>News</span>
@@ -100,16 +106,16 @@
             </div>
         </div>
 
-        <div class="notification-box">
+        <div id="notifBox" class="notification-box">
             <strong>Hey!</strong>
             <p>People are looking at your profile. Find out who.</p>
-            <button class="close-btn">✖</button>
+            <button id="closeNotif" class="close-btn">✖</button>
         </div>
     </div>
 
-    <!-- Main Column -->
+    <!-- Main Content -->
     <div class="maincolumn">
-        <div class="card status-box">
+        <div class="status-box">
             <h2>Social Media Template</h2>
             <div class="status-box">
                 <input type="text" placeholder="Status: Feeling Blue">
@@ -119,10 +125,11 @@
 
         <div class="card post">
             <div class="post-header">
-                <img src="jane.png" alt="User">
+                <img src="jhon.png" alt="User">
                 <h4>John Doe</h4>
                 <span>1 min ago</span>
             </div>
+            <hr>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             <div class="post-images">
                 <img src="first.png" alt="Post Image">
@@ -136,10 +143,11 @@
 
         <div class="card post">
             <div class="post-header">
-                <img src="./jane.png" alt="User">
+                <img src="jane_doe.png" alt="User">
                 <h4>Jane Doe</h4>
                 <span>16 min ago</span>
             </div>
+            <hr>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             <div class="post-actions">
                 <button><img src="./like_icon.png" alt="Like">Like</button>
@@ -148,7 +156,7 @@
         </div>
         <div class="card post">
             <div class="post-header">
-                <img src="profile pic1.jpg" alt="User">
+                <img src="jane.png" alt="User">
                 <h4>Angie Jane</h4>
                 <span>32 min</span>
             
@@ -167,11 +175,11 @@
             
     
 
-    <!-- Right Sidebar -->
+    <!-- Right Side -->
     <div class="rightcolumn">
-        <div class="card upcoming-events">
+        <div class="upcoming-events">
             <h4>Upcoming Events:</h4>
-            <img src="first.png" alt="Event">
+            <img src="img_forest.jpg" alt="Event">
             <p><strong>Holiday</strong></p>
             <p>Friday 15:00</p>
             <button class="info-btn">Info</button>
@@ -179,7 +187,7 @@
     
         <div class="card friend-request">
             <h4>Friend Request</h4>
-            <img src="angie_profile.png" alt="Profile">
+            <img src="jane.png" alt="Profile">
             <p><strong>Jane Doe</strong></p>
             <div class="friend-actions">
                 <button class="accept-btn">✔</button>
@@ -196,7 +204,7 @@
         </div>
     </div>
 
-<div class="footer">Footer content</div>
+<div class="footer">Footer</div>
 
 </body>
 </html>
